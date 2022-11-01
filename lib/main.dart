@@ -10,7 +10,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return new MaterialApp(
-      title: 'Painter Example',
+      title: 'Flutter Dem',
       home: new ExamplePage(),
     );
   }
@@ -32,7 +32,7 @@ class _ExamplePageState extends State<ExamplePage> {
 
   static PainterController _newController() {
     PainterController controller = new PainterController();
-    controller.thickness = 5.0;
+    controller.thickness = 10.0;
     controller.backgroundColor = Colors.green;
     return controller;
   }
@@ -79,7 +79,7 @@ class _ExamplePageState extends State<ExamplePage> {
     }
     return new Scaffold(
       appBar: new AppBar(
-          title: const Text('Painter Example'),
+          title: const Text('Flutter Demo'),
           actions: actions,
           bottom: new PreferredSize(
             child: new DrawBar(_controller),
@@ -211,6 +211,7 @@ class _ColorPickerButtonState extends State<ColorPickerButton> {
                       child: new ColorPicker(
                         pickerColor: pickerColor,
                         onColorChanged: (Color c) => pickerColor = c,
+                        // Image.asset('assets/Image/test.jpg', height: 100, width: 100,),
                       )));
             }))
         .then((_) {
